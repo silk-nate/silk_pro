@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RIG1.0</title>
+<link rel="stylesheet" type="text/css" href="rig1.css">
+<script type="text/javascript" src="rig1.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<div id="tabs">
+		<ul id="tabs-nav">
+			<li><a href="#" rel="2">Build Your Own Rig</a></li> <!--tabs-RigBuilder-->
+		</ul>
+	</div>
+	<!--最外层的div-->
+	<div id="tabs-RigBuilder">
+		<table style="height:500px" border="1" cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="vertical-align:top;width:535px">
+					<table border="1" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<div id="FilterSection">
+									<h3><a id="showtext" onClick="showdiv('RbAccordion','showtext')">Select Rig Specifications</a></h3>
+									<div class="RbAccordin" id="RbAccordion">
+										<table class="accordionSection">
+												<input id="DropDownRBMenus" name="DropDownRBMenus" type="hidden" value="14" />
+												<tr>
+													<td class="RWeditor-label"><b>Hook Load</b></td>
+													<td class="RWdisplay-field">
+														<select	id="DropDown_RB0" name="DropDown_RB0" style="width: 100px;" onchange="test('DropDown_RB0')";>
+																<option	value="images/#">--Select--</option>
+																<option value="images/#">100 T</option>
+																<option value="images/#">150 T</option>
+																<option value="images/#">250 T</option>
+																<option value="images/#">350 T</option>
+																<option value="images/#">375 T</option>
+																<option value="images/#">500 T</option>
+																<option value="images/#">750 T</option>
+																<option value="images/#">750+ T</option>
+														</select>
+														<input id="RBGroupIds0" name="RBGroupIds0" type="hidden" value="1" />
+													</td>
+													<td class="RWeditor-label"><b>Mast</b></td>
+													<td class="RWdisplay-field">
+														<select	id="DropDown_RB1" name="DropDown_RB1" style="width: 100px;" onchange="test('DropDown_RB1')";>
+															<option value="">--Select--</option>
+															<option value="images/SGL-TEL-CR.PNG">Singles (85 ft &amp; under)</option>
+															<option value="images/DBL-TEL-CR.PNG">Doubles (96-120 ft)</option>
+															<option value="images/TRP-CNT-SLR.PNG">Triples (127+ ft)</option>
+														</select>
+														<input id="RBGroupIds1" name="RBGroupIds1" type="hidden" value="2" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Mast Type</b></td>
+													<td class="RWdisplay-field">
+														<select	id="DropDown_RB2" name="DropDown_RB2" style="width: 100px;" onchange="test('DropDown_RB2')";>
+															<option value="">--Select--</option>
+															<option value="images/#">Telescopic</option>
+															<option value="images/#">Cantilever</option>
+															<option value="images/#">Slant</option>
+														</select>
+														<input id="RBGroupIds2" name="RBGroupIds2" type="hidden"value="5" />
+													</td>
+													<td class="RWeditor-label"><b>Mast Raising System</b>
+													</td>
+													<td class="RWdisplay-field">
+														<select	id="DropDown_RB3" name="DropDown_RB3"style="width: 100px;" onchange="test('DropDown_RB3')">
+															<option value="">--Select--</option>
+															<option value="images/#">Cylinder Raised</option>
+															<option value="images/#">Sling-Line Raised</option>
+														</select>
+														<input id="RBGroupIds3" name="RBGroupIds3" type="hidden" value="6" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Substructure Type</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB4" name="DropDown_RB4" style="width: 100px;" onchange="document.getElementById('tu').src=this.value">
+															<option	value="">--Select--</option>
+															<option value="images/Ideal-Sling.png">Slingshot-Cylinder</option>
+															<option value="images/Dreco-Sling.png">Slingshot-Winch</option>
+															<option value="images/Dreco-Sling.png">Slingshot-Drawworks</option>
+															<option value="images/Swingup.png">Swing-up</option>
+															<option value="images/BoxonBox.png">Box on Box</option>
+															<option value="images/BoxinaBox.png">Box in Box</option>
+															<option value="images/BoxinaBox.png">Telescoping</option>
+															<option value="images/One-piece.png">1-Piece</option>
+														</select>
+														<input id="RBGroupIds4" name="RBGroupIds4" type="hidden" value="7" />
+													</td>
+													<td class="RWeditor-label"><b>Drilling Module Moving System</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB5" name="DropDown_RB5" style="width: 100px;" onchange="test('DropDown_RB5')">
+															<option	value="">--Select--</option>
+															<option value="images/#">None</option>
+															<option value="images/#">Trailerized</option>
+															<option value="images/#">Skidding</option>
+															<option value="images/#">Walking (Lift and Roll)</option>
+															<option value="images/#">Powered Wheels</option>
+															<option value="images/#">Tracked</option>
+														</select>
+														<input id="RBGroupIds5" name="RBGroupIds5" type="hidden" value="8" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Drill Floor Height</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB6" name="DropDown_RB6" style="width: 100px;" onchange="test('DropDown_RB6')">
+															<option value="">--Select--</option>
+															<option value="30">14ft</option>
+															<option value="31">20ft</option>
+															<option value="32">22ft</option>
+															<option value="33">25ft</option>
+															<option value="34">28ft</option>
+															<option value="35">30ft</option>
+															<option value="36">34ft</option>
+															<option value="37">35ft</option>
+															<option value="38">40+ft</option>
+														</select>
+														<input id="RBGroupIds6" name="RBGroupIds6" type="hidden" value="9" />
+													</td>
+													<td class="RWeditor-label"><b>Setback Capacity</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB7" name="DropDown_RB7" style="width: 100px;" onchange="test('DropDown_RB7')">
+															<option value="">--Select--</option>
+															<option value="71">None</option>
+															<option value="72">250000 lbs</option>
+															<option value="73">320000 lbs</option>
+															<option value="74">350000 lbs</option>
+															<option value="75">500000 lbs</option>
+															<option value="76">575000 lbs</option>
+															<option value="77">600000 lbs</option>
+															<option value="78">700,000 lbs</option>
+															<option value="79">700,000+lbs</option>
+														</select>
+														<input id="RBGroupIds7" name="RBGroupIds7" type="hidden" value="10" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Drawworks HP</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB8" name="DropDown_RB8" style="width: 100px;" onchange="test('DropDown_RB8')">
+															<option value="">--Select--</option>
+															<option value="12">700 HP AC</option>
+															<option value="11">1000 HP AC</option>
+															<option value="8">1500 HP AC</option>
+															<option value="9">2000 HP AC</option>
+															<option value="10">3000+ HP AC</option>
+															<option value="5">1500 HP DC</option>
+															<option value="6">2000 HP DC</option>
+															<option value="7">3000+ HP DC</option>
+														</select>
+														<input id="RBGroupIds8" name="RBGroupIds8" type="hidden" value="11" />
+													</td>
+													<td class="RWeditor-label"><b>Top Drive</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB9" name="DropDown_RB9" style="width: 100px;" onchange="document.getElementById('tu').src=this.value">
+															<option value="">--Select--</option>
+															<option value="images/TOP-DRIVE.PNG">150 Ton</option>
+															<option value="images/TOP-DRIVE.PNG">250 Ton</option>
+															<option value="images/TOP-DRIVE.PNG">350 Ton</option>
+															<option value="images/TOP-DRIVE.PNG">500 Ton</option>
+															<option value="images/TOP-DRIVE.PNG">750 Ton</option>
+														</select>
+														<input id="RBGroupIds9" name="RBGroupIds9" type="hidden" value="12" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Iron Roughneck</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB10" name="DropDown_RB10" style="width: 100px;" onchange="document.getElementById('tu').src=this.value">
+															<option value="">--Select--</option>
+															<option value="images/IRON-RN.png">80,000 Ft-Lbs B/O</option>
+															<option value="images/IRON-RN.png">120,000 Ft-Lbs B/O</option>
+														</select>
+														<input id="RBGroupIds10" name="RBGroupIds10" type="hidden" value="13" />
+													</td>
+													<td class="RWeditor-label"><b>Rotary Table</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB11" name="DropDown_RB11" style="width: 100px;" onchange="test('DropDown_RB11')">
+															<option value="">--Select--</option>
+															<option value="19">20-1/2 Opening</option>
+															<option value="20">27-1/2 Opening</option>
+															<option value="21">37-1/2 Opening</option>
+															<option value="22">49-1/2 Opening</option>
+															<option value="70">None</option>
+														</select>
+														<input id="RBGroupIds11" name="RBGroupIds11" type="hidden" value="16" />
+													</td>
+												</tr>
+												<tr>
+													<td class="RWeditor-label"><b>Mud Pumps</b></td>
+													<td class="RWdisplay-field">
+														<select id="DropDown_RB12" name="DropDown_RB12" style="width: 100px;" onchange="test('DropDown_RB12')">
+															<option value="">--Select--</option>
+															<option value="13">500 HP</option>
+															<option value="16">800 HP</option>
+															<option value="14">1000 HP</option>
+															<option value="17">1300 HP</option>
+															<option value="15">1600 HP</option>
+															<option value="18">2200 HP</option>
+														</select>
+														<input id="RBGroupIds12" name="RBGroupIds12" type="hidden" value="17" />
+													</td>
+													<td class="RWeditor-label"><b>BOP</b></td>
+													<td class="RWdisplay-field">
+													<select id="DropDown_RB13" name="DropDown_RB13" style="width: 100px;" onchange="test('DropDown_RB13')">
+														<option value="">--Select--</option>
+														<option value="images/BOP.png">11&quot;</option>
+														<option value="images/BOP.png">13-5/8&quot;</option>
+														<option value="images/BOP.png">18-3/4&quot;</option>
+														<option value="images/BOP.png">21-1/4&quot;</option>
+													</select>
+													<input id="RBGroupIds13" name="RBGroupIds13" type="hidden" value="18" />
+													</td>
+										</table>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="RbAddonSection">
+									<h3><a id="showtext2" onClick="showdiv('RbAddonAccordin','showtext2')" >Additional Features</a></h3>
+									<div class="RbAddonAccordin" id="RbAddonAccordin" style="padding: 0px;">
+										<table class="accordionSection">
+											<tr>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="1061" />Winterization
+												</td>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="1064" />Walking system
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="1062" /> High ambient rig design
+												</td>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="1065" /> Extra mud pump
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="2063" /> Dual standpipe option
+												</td>
+												<td style="white-space: nowrap;">
+													<input type="checkbox" name="chkRBAddons" value="2061" />Additional genset
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+												    <input type="checkbox" name="chkRBAddons" value="2064" />Bi-Fuel genset option
+												</td>
+												<td style="white-space: nowrap;">
+												    <input type="checkbox" name="chkRBAddons" value="2066" /> Roofson mud tanks
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+												    <input type="checkbox" name="chkRBAddons" value="2062" /> 7500 psi option
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table><!--build rig select-->
+				</td><!--左侧-->
+				<td style="vertical-align:top">
+					<table style="width:355px">
+						<tr>
+							<th colspan=3 class='MainSubhead'><b>Your Rig</b>
+								<input type="button" value="Reset" id="Submit" onclick="" style="float: right"/>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<div id="RigBuilderCustomResults">
+									<!-- <img id="tu" src="images/background.png" style="position:absolute;left:562px;top:100px;width:348px;height:450px;background:none" />
+									<img src="images/SGL-TEL-CR.PNG" style="position:absolute;left:562px;top:100px;width:348px;height:450px;background:none"/>
+									<img src="images/Dreco-Sling.png" style="position:absolute;left:562px;top:100px;width:348px;height:450px;background:none"/> -->
+								</div>
+							</td>
+						</tr>
+					</table><!--add additional options-->
+				</td><!--右侧-->
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

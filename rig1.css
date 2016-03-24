@@ -1,0 +1,9 @@
+/*初始化css代碼*/
+
+
+/*customer css*/
+*{list-style:none;}
+
+#showtext,#showtext2{display: block;height: 20px;cursor: hand; cursor:pointer;width: 455px;height: 35px;}
+#showtext:hover,#showtext2:hover{background-color: #CCC;}
+#RbAccordion,#RbAddonAccordin{display: none;}

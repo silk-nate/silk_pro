@@ -11,3 +11,4 @@ for($i=0;$i<9;$i++)
     echo $i;
     echo $i += 2;
 }
+echo '234';
